@@ -1,10 +1,13 @@
 class AddBudgetPage
+
   def initialize (driver)
     @driver = driver
   end
 
+  BUDGET_PAGE_FIND = 'protect.budgetwatch:id/budgetNameEdit'
+
   def fill_budget_page_name
-    @driver.find_element(:id, 'protect.budgetwatch:id/budgetNameEdit').send_keys("Peter Pan")
+    @driver.find_element(:id, BUDGET_PAGE_FIND).send_keys("Peter Pan")
   end
 
   def fill_budget_page_value
